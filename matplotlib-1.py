@@ -50,3 +50,80 @@ ypoints = np.array([3, 8, 1, 10, 5, 7])
 
 plt.plot(ypoints)
 plt.show()
+
+# Marcadores
+# Se puede utilizar la notacion de cadena de acceso directo para especificar los marcadores.
+# Se pueden usar los siguientes marcadores:
+# 'o' - Círculo
+# '*' - Estrella
+# '.' - Punto
+# ',' - Punto pequeño
+# 'x' - X
+# '+' - Cruz
+# 'P' - Plus
+# 's' - Cuadrado
+# 'D' - Diamante
+# 'p' - Pentágono
+# 'X' - X rotado
+# 'h' - Hexágono 1
+# 'H' - Hexágono 2
+# 'v' - Triángulo hacia abajo
+# '^' - Triángulo hacia arriba
+# '<' - Triángulo hacia la izquierda
+# '>' - Triángulo hacia la derecha
+# '1' - Triángulo hacia arriba y hacia la derecha
+# '2' - Triángulo hacia arriba y hacia la izquierda
+# '3' - Triángulo hacia abajo y hacia la derecha
+# '4' - Triángulo hacia abajo y hacia la izquierda
+# '|' - Línea vertical hacia arriba
+# '_' - Línea horizontal hacia la izquierda
+print()
+print("Marcadores")
+
+# Marcando cada punto con un circulo
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker='o')
+plt.show()
+
+# Marcando cada punto con una estrella
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker='*')
+plt.show()
+
+# Cadenas de formato fmt
+# Se escribe con la sintaxis marker|line|color
+# Se puede especificar los colores de los marcadores y de las lineas.
+# Se puede usar cualquier combinacion de caracteres para especificar el color.
+# Se puede usar un solo caracter para especificar el color.
+# Se puede usar un solo caracter para especificar el color de las lineas.
+# Marcando cada punto con un circulo
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, 'o:r')
+plt.show()
+
+# Tamaño del marcador
+# Se puede usar el parametro markersize o la version mas corta ms para establecer el tamaño de los marcadores
+# Estableciendo el tamaño de los marcadores a 20
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker='o', ms=20)
+plt.show()
+
+# Color del marcador
+# Se puede usar el parametro markeredgecolor o la version mas corta mec para establecer el color de los marcadores.
+# Se pueden usar colores hexadecimales.
+# Estableciendo el color del borde de los marcadores a rojo
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker='o', mec='r')
+plt.show()
+
+# Se puede usar el parametro markerfacecolor o la version mas corta mfc para establecer el color de los marcadores
+# Estableciendo el color de los marcadores a rojo
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker='o', mfc='r')
+plt.show()
