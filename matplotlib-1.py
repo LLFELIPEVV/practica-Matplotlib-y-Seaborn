@@ -127,3 +127,58 @@ ypoints = np.array([3, 8, 1, 10])
 
 plt.plot(ypoints, marker='o', mfc='r')
 plt.show()
+
+# Linea de Matplotlib
+print()
+print("Linea de Matplotlib")
+
+# Estilo de linea
+# Se puede usar el parametro linestyle o la version mas corta ls para cambiar el estilo de la linea.
+# Utilizando una linea de puntos.
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, linestyle='dotted')
+plt.show()
+
+# Utilizando una linea discontinua
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, linestyle='dashed')
+plt.show()
+
+# Sintaxis mas corta
+# linestyle se puede escribir ls.
+# dotted se puede escribir :.
+# dashed se puede escribir --.
+# Usando la sintaxis mas corta para trazar una linea de puntos
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, ls=':')
+plt.show()
+
+# Color de linea
+# Se puede utilizar el argumento color o la version mas corta c para establecer el color de la linea.
+# Estableciendo el color de la linea en rojo
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, color='r')
+plt.show()
+
+# Ancho de linea
+# Se puede usar el parametro linewidth o la version mas corta lw para cambiar el ancho de la linea.
+# Estableciendo el ancho de la linea a 20.5
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, linewidth='20.5')
+plt.show()
+
+# Lineas Multiples
+# Se pueden trazar varias lineas agregando multiples pares de argumentos x y en la funcion plot().
+# Dibujando 2 lineas
+y1 = np.array([3, 8, 1, 10])
+y2 = np.array([6, 2, 7, 11])
+
+plt.plot(y1)
+plt.plot(y2)
+
+plt.show()
