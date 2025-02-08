@@ -182,3 +182,64 @@ plt.plot(y1)
 plt.plot(y2)
 
 plt.show()
+
+# Etiquetas y titulos de Matplotlib
+print()
+print("Etiquetas y titulos de Matplotlib")
+
+# Creando etiquetas para un grafico
+# Se puede usar la funcion xlabel() y ylabel() para establecer etiquetas para los ejes x y y.
+# Añadiendo etiquetas a los ejes x e y
+x = np.array([80, 85, 90, 95, 100])
+y = np.array([240, 250, 260, 270, 280])
+
+plt.plot(x, y)
+
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.show()
+
+# Creando un titulo para un grafico
+# Se puede usar la funcion title() para establecer un titulo para el grafico.
+# Añadiendo un titulo al grafico
+x = np.array([80, 85, 90, 95, 100])
+y = np.array([240, 250, 260, 270, 280])
+
+plt.plot(x, y)
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.show()
+
+# Establecer propiedades de fuente para titulos y etiquetas
+# Se puede usar el parametro fontdict para establecer propiedades de fuente para el titulo y las etiquetas.
+# Estableciendo propiedades de fuente para titulos y etiquetas
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+font1 = {'family': 'serif', 'color': 'blue', 'size': 20}
+font2 = {'family': 'serif', 'color': 'darkred', 'size': 15}
+
+plt.title("Sports Watch Data", fontdict=font1)
+plt.xlabel("Average Pulse", fontdict=font2)
+plt.ylabel("Calorie Burnage", fontdict=font2)
+
+plt.plot(x, y)
+
+plt.show()
+
+# Posicionar el titulo
+# Se puede usar el parametro loc para posicionar el titulo.
+# Estableciendo el titulo en la izquierda
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data", loc='left')
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+plt.show()
