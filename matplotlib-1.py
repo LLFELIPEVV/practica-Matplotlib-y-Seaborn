@@ -243,3 +243,59 @@ plt.ylabel("Calorie Burnage")
 
 plt.plot(x, y)
 plt.show()
+
+# Cuadricula Matplotlib
+# Se puede usar la funcion grid() para establecer cuadricula en el grafico.
+print()
+print("Cuadricula Matplotlib")
+
+# Añadiendo lineas de cuadricula al grafico
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+plt.grid()
+
+plt.show()
+
+# Especificar que lineas de cuadricula se van a mostrar
+# Se puede utilizar el parametro axis para especificar que lineas de cuadricula mostrar.
+# Mostrando las lineas de cuadricula solo para el eje x.
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+plt.grid(axis='x')
+
+plt.show()
+
+# Mostrandos las lineas de cuadricula solo para el eje y.
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+plt.grid(axis='y')
+
+plt.show()
+
+# Establecer propiedades de linea para la cuadricula
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+plt.grid(color='green', linestyle='--', linewidth=0.5)
+
+plt.show()
