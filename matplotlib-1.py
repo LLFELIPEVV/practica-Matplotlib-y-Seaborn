@@ -299,3 +299,127 @@ plt.plot(x, y)
 plt.grid(color='green', linestyle='--', linewidth=0.5)
 
 plt.show()
+
+# Subtrama de Matplotlib
+print()
+print("Subtrama de Matplotlib")
+
+# Mostrar graficos multiples
+# Con la funcion subplot() se pueden dibujar multiples graficos en una figura.
+# Plot 1
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(1, 2, 1)
+plt.plot(x, y)
+
+# Plot 2
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(1, 2, 2)
+plt.plot(x, y)
+
+plt.show()
+
+# Funcion subplot()
+# La Funcion subplot() toma 3 argumentos que describen el diseño de la figura.
+# El diseño esta organizado en filas y columnas, que estan representadas por el primer y segundo argumento.
+# El tercer argumento representa el indice de la figura.
+# Dibujando dos graficos en vertical
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 1, 1)  # (filas, columnas, orden)
+plt.plot(x, y)
+
+# Plot 2
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 1, 2)
+plt.plot(x, y)
+
+plt.show()
+
+# Dibujando 6 graficos
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 1)
+plt.plot(x, y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 2)
+plt.plot(x, y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 3)
+plt.plot(x, y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 4)
+plt.plot(x, y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 5)
+plt.plot(x, y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 6)
+plt.plot(x, y)
+
+plt.show()
+
+# Titulo
+# Se puede agregar un titulo a cada subtrama con la funcion title().
+# Agregando un titulo a cada subtrama
+# plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(1, 2, 1)
+plt.plot(x, y)
+plt.title("SALES")
+
+# plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(1, 2, 2)
+plt.plot(x, y)
+plt.title("INCOME")
+
+plt.show()
+
+# Super titulo
+# Se puede agregar un titulo general a la figura con la funcion suptitle().
+# Agregando un titulo general a la figura
+# plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(1, 2, 1)
+plt.plot(x, y)
+plt.title("SALES")
+
+# plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(1, 2, 2)
+plt.plot(x, y)
+plt.title("INCOME")
+
+plt.suptitle("MY SHOP")
+plt.show()
