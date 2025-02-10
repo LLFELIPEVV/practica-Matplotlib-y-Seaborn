@@ -423,3 +423,113 @@ plt.title("INCOME")
 
 plt.suptitle("MY SHOP")
 plt.show()
+
+# Dispersion de Matplotlib
+print()
+print("Dispersion de Matplotlib")
+
+# Creacion de diagramas de dispersion
+# Se puede usar la funcion scatter() para crear diagramas de dispersion.
+# Dibujando un diagrama de dispersion
+x = np.array([5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6])
+y = np.array([99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86])
+
+plt.scatter(x, y)
+plt.show()
+
+# Comparacion de graficos
+# Se puede comparar dos graficos con la funcion scatter().
+# Dibujando dos diagramas de dispersion
+# day one, the age and speed of 13 cars:
+x = np.array([5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6])
+y = np.array([99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86])
+plt.scatter(x, y)
+
+# day two, the age and speed of 15 cars:
+x = np.array([2, 2, 8, 1, 15, 8, 12, 9, 7, 3, 11, 4, 7, 14, 12])
+y = np.array([100, 105, 84, 105, 90, 99, 90, 95, 94, 100, 79, 112, 91, 80, 85])
+plt.scatter(x, y)
+
+plt.show()
+
+# Colores
+# Se puede usar el argumento c para establecer el color de los puntos.
+# Estableciendo el color de los puntos
+x = np.array([5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6])
+y = np.array([99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86])
+plt.scatter(x, y, color='hotpink')
+
+x = np.array([2, 2, 8, 1, 15, 8, 12, 9, 7, 3, 11, 4, 7, 14, 12])
+y = np.array([100, 105, 84, 105, 90, 99, 90, 95, 94, 100, 79, 112, 91, 80, 85])
+plt.scatter(x, y, color='#88c999')
+
+plt.show()
+
+# Colores para cada punto
+# Se puede usar una matriz de colores para establecer el color de cada punto.
+# Estableciendo el color de cada punto
+x = np.array([5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6])
+y = np.array([99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86])
+colors = np.array(["red", "green", "blue", "yellow", "pink", "black",
+                  "orange", "purple", "beige", "brown", "gray", "cyan", "magenta"])
+
+plt.scatter(x, y, c=colors)
+
+plt.show()
+
+# Mapa de colores
+# Un mapa de colores es una tabla de colores que se refleja en una escala de colores.
+# Se puede usar el parametro cmap para establecer el mapa de colores.
+# Estableciendo el mapa de colores
+x = np.array([5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6])
+y = np.array([99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86])
+colors = np.array([0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
+
+plt.scatter(x, y, c=colors, cmap='viridis')
+
+plt.show()
+
+# Se puede incluir el mapa de colores.
+x = np.array([5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6])
+y = np.array([99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86])
+colors = np.array([0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
+
+plt.scatter(x, y, c=colors, cmap='viridis')
+
+plt.colorbar()
+
+plt.show()
+
+# Tamaño
+# Se puede cambiar el tamaño de los puntos con el argumento s.
+# Estableciendo el tamaño de los puntos
+x = np.array([5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6])
+y = np.array([99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86])
+sizes = np.array([20, 50, 100, 200, 500, 1000, 60, 90, 10, 300, 600, 800, 75])
+
+plt.scatter(x, y, s=sizes)
+
+plt.show()
+
+# Alfa
+# Se puede cambiar la transparencia de los puntos con el argumento alfa.
+# Estableciendo la transparencia de los puntos
+x = np.array([5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6])
+y = np.array([99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86])
+sizes = np.array([20, 50, 100, 200, 500, 1000, 60, 90, 10, 300, 600, 800, 75])
+
+plt.scatter(x, y, s=sizes, alpha=0.5)
+
+plt.show()
+
+# Combinacion de graficos de dispersion
+x = np.random.randint(100, size=(100))
+y = np.random.randint(100, size=(100))
+colors = np.random.randint(100, size=(100))
+sizes = 10 * np.random.randint(100, size=(100))
+
+plt.scatter(x, y, c=colors, s=sizes, alpha=0.5, cmap='nipy_spectral')
+
+plt.colorbar()
+
+plt.show()
