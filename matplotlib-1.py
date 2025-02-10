@@ -533,3 +533,43 @@ plt.scatter(x, y, c=colors, s=sizes, alpha=0.5, cmap='nipy_spectral')
 plt.colorbar()
 
 plt.show()
+
+# Barras de Matplotlib
+print()
+print("Barras de Matplotlib")
+
+# Creacion de graficos de barras
+# Se puede usar la funcion bar() para crear graficos de barras.
+# Dibujando un grafico de barras
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y)
+plt.show()
+
+# Barras horizontales
+# Se puede crear barras horizontales con la funcion barh().
+# Dibujando un grafico de barras horizontal
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.barh(x, y)
+plt.show()
+
+# Color de las barras
+# Se puede usar el argumento color para establecer el color de las barras.
+# Estableciendo el color de las barras
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y, color="red")
+plt.show()
+
+# Ancho de las barras
+# Se puede usar el argumento width para establecer el ancho de las barras. Para las barras horizontales se usa height.
+# Estableciendo el ancho de las barras
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y, width=0.1)
+plt.show()
