@@ -585,3 +585,81 @@ x = np.random.normal(170, 10, 250)
 
 plt.hist(x)
 plt.show()
+
+# Graficos circulares
+print()
+print("Graficos circulares")
+
+# Creando un grafico circular
+y = np.array([35, 25, 25, 15])
+
+plt.pie(y)
+plt.show()
+
+# Etiquetas
+# Se pueden agregar etiquetas al grafico circular con el parametro labels.
+# Agregando etiquetas al grafico circular
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels=mylabels)
+plt.show()
+
+# Angulo de inicio
+# Se puede cambiar el angulo de inicio con el parametro startangle.
+# Estableciendo el angulo de inicio
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels=mylabels, startangle=90)
+plt.show()
+
+# Explotar
+# Se puede explotar una porcion de un grafico circular con el parametro explode.
+# Explotando una porcion del grafico circular
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.2, 0, 0, 0]
+
+plt.pie(y, labels=mylabels, explode=myexplode)
+plt.show()
+
+# Sombra
+# Se puede agregar una sombra a un grafico circular con el parametro shadow.
+# Agregando una sombra al grafico circular
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.2, 0, 0, 0]
+
+plt.pie(y, labels=mylabels, explode=myexplode, shadow=True)
+plt.show()
+
+# Colores
+# Se puede usar el parametro colors para establecer los colores de las porciones del grafico circular.
+# Estableciendo los colores de las porciones del grafico circular
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+mycolors = ["black", "hotpink", "b", "#4CAF50"]
+
+plt.pie(y, labels=mylabels, colors=mycolors)
+plt.show()
+
+# Leyenda
+# Se puede agregar una leyenda con la funcion legend().
+# Agregando una leyenda al grafico circular
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels=mylabels)
+plt.legend()
+plt.show()
+
+# Leyenda con encabezado
+# Se puede agregar un encabezado a la leyenda con el parametro title.
+# Agregando un encabezado a la leyenda
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels=mylabels)
+plt.legend(title="Four Fruits:")
+plt.show()
