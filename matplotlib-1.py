@@ -573,3 +573,15 @@ y = np.array([3, 8, 1, 10])
 
 plt.bar(x, y, width=0.1)
 plt.show()
+
+# Histogramas de matplotlib
+print()
+print("Histogramas de matplotlib")
+
+# Creacion de histogramas
+# Se puede usar la funcion hist() para crear histogramas. La funcion hist() lee la matriz y produce el histograma.
+# Dibujando un histograma
+x = np.random.normal(170, 10, 250)
+
+plt.hist(x)
+plt.show()
