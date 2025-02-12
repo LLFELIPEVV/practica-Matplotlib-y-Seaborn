@@ -66,3 +66,21 @@ plt.show()
 # Combina boxplot y distribución.
 sns.violinplot(x="day", y="total_bill", data=tips, hue="sex")
 plt.show()
+
+# Documentacion oficial
+# Aplica el tema por defecto.
+sns.set_theme()
+
+# Carga un Dataset de ejemplo
+tips = sns.load_dataset("tips")
+
+# Crea la visualizacion
+sns.relplot(
+    data=tips,
+    x="total_bill", y="tip", col="time",
+    hue="smoker", style="smoker", size="size"
+)
+
+plt.show()
+
+
