@@ -1,6 +1,6 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
-import pandas as pd
+# import pandas as pd
 import numpy as np
 
 # Configuracion inicial
@@ -83,4 +83,51 @@ sns.relplot(
 
 plt.show()
 
+# La función relplot()se llama así porque está diseñada para visualizar muchas relaciones estadísticas diferentes
+dots = sns.load_dataset("dots")
+sns.relplot(
+    data=dots, kind="line",
+    x="time", y="firing_rate", col="align",
+    hue="choice", size="coherence", style="choice",
+    facet_kws=dict(sharex=False)
+)
 
+plt.show()
+
+# Estimacion estadistica
+# Muchas funciones de Seaborn realizarán automáticamente la estimación estadística necesaria para responder a estas preguntas.
+fmri = sns.load_dataset("fmri")
+sns.relplot(
+    data=fmri, kind="line",
+    x="timepoint", y="signal", col="region",
+    hue="event", style="event",
+)
+
+plt.show()
+
+# Es posible mejorar un diagrama de dispersión al incluir un modelo de regresión lineal (y su incertidumbre) utilizando lmplot().
+sns.lmplot(data=tips, x="total_bill", y="tip", col="time", hue="smoker")
+
+plt.show()
+
+# La función Seaborn displot()admite varios enfoques para visualizar distribuciones.
+sns.displot(data=tips, x="total_bill", col="time", kde=True)
+
+plt.show()
+
+# Seaborn también intenta promover técnicas potentes pero menos conocidas, como calcular y trazar la función de distribución acumulativa empírica de los datos.
+sns.displot(data=tips, kind="ecdf", x="total_bill",
+            col="time", hue="smoker", rug=True)
+
+plt.show()
+
+# Se puede acceder a los gráficos especializados orientados a la visualización de datos categóricos a traves de catplot().
+sns.catplot(data=tips, kind="swarm", x="day", y="total_bill", hue="smoker")
+
+plt.show()
+
+# Como alternativa, puede utilizar la estimación de densidad del kernel para representar la distribución subyacente de la que se extraen los puntos.
+sns.catplot(data=tips, kind="violin", x="day", y="total_bill", hue="smoker",
+            split=True)
+
+plt.show()
